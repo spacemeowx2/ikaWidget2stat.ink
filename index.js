@@ -283,7 +283,7 @@ async function main() {
         multi.append(async () => {
             bar.tick()
             if (!existSet.includes(result.no)) {
-                await postBattle(result, true)
+                await postBattle(result)
             }
         })
     }
