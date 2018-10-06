@@ -105,6 +105,7 @@ function playerList (result) {
         level: p.rank,
         star_rank: p.starRank,
         rank: p.udemaeName.toLowerCase(),
+        rank_exp: p.sPlusNumber,
         rank_in_team: ++i,
         kill: p.kill,
         death: p.death,
@@ -188,6 +189,7 @@ function result2stat (result) {
     ret.level = result.player.rank
     ret.star_rank = result.player.starRank
     ret.rank = result.player.udemaeName.toLocaleLowerCase()
+    ret.rank_exp = result.player.sPlusNumber
     if (ret.mode === 'gachi') {
         ret.x_power = result.xPower
         ret.estimate_x_power = result.gachiEstimateXPower
