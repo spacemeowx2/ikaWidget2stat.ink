@@ -75,7 +75,7 @@ function player2gears (player) {
     const f = (gear, skills) => ({
         gear: `#${gear.ID}`,
         primary_ability: skill(skills.main.ID),
-        secondary_abilities: skills.subs.map(i => skill(i.ID))
+        secondary_abilities: ('subs' in skills ? skills.subs : skills.sub).map(i => skill(i.ID))
     })
     return {
         headgear: f(player.headGear, player.headSkills),
